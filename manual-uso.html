@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhaTicket — Manual de Uso e Boas-Vindas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+<style>
+  :root {
+    --accent: #1fae57;
+    --accent-soft: #e6f7ec;
+    --text: #1a1f1c;
+    --text-muted: #5b6660;
+    --border: #e2e8e4;
+    --font-display: "Bricolage Grotesque", serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .page {
+    padding: 48px 56px;
+  }
+
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+      radial-gradient(ellipse 700px 400px at 85% 10%, var(--accent-soft), transparent 60%);
+  }
+
+  .cover .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  .cover .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 22px;
+  }
+
+  .cover .tag {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .cover h1 {
+    font-family: var(--font-display);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    max-width: 560px;
+  }
+
+  .cover p.lead {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0;
+  }
+
+  .accent { color: var(--accent); }
+
+  .page-break { page-break-before: always; }
+
+  h2.section-num {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  h2.section-num .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin: 0 0 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 26px 0 8px;
+  }
+
+  p { margin: 0 0 12px; }
+
+  ul, ol {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+
+  li { margin-bottom: 6px; }
+
+  .box {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin: 18px 0;
+  }
+
+  .box.warning {
+    background: #fff6e6;
+    border-color: #f3e0bd;
+  }
+
+  .box strong { color: var(--accent); }
+
+  .box.warning strong { color: #b9762a; }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    display: grid;
+    gap: 8px;
+  }
+
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .checklist i {
+    color: var(--accent);
+    margin-top: 3px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+  }
+
+  th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .footer-note {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cta-final {
+    text-align: center;
+    background: var(--accent-soft);
+    border-radius: 18px;
+    padding: 40px 32px;
+    margin-top: 30px;
+  }
+
+  .cta-final h2 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 10px;
+  }
+
+  .cta-final p { color: var(--text-muted); margin-bottom: 18px; }
+
+  .cta-final a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="page cover">
+  <div class="logo">
+    <span class="logo-icon"><i class="fa-brands fa-whatsapp"></i></span>
+    Wha<span class="accent">Ticket</span>
+  </div>
+  <span class="tag">Manual de Uso · Área do Cliente</span>
+  <h1>Seja bem-vindo ao <span class="accent">WhaTicket</span>. Aqui está o caminho completo para colocar seu sistema no ar.</h1>
+  <p class="lead">Este manual reúne tudo que você precisa para instalar, configurar e começar a vender com o WhaTicket Saas. Siga a ordem dos capítulos e, em poucas horas, seu atendimento de WhatsApp estará rodando.</p>
+</section>
+
+<!-- 1. O QUE VOCÊ RECEBEU -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">1</span> O que você recebeu</h2>
+  <p class="section-sub">Confira abaixo tudo que já está liberado na sua área de membros.</p>
+
+  <p>Sua compra dá acesso a um pacote completo, pensado para quem quer usar o sistema na própria empresa ou revender para outros clientes.</p>
+
+  <ul class="checklist">
+    <li><i class="fa-solid fa-check"></i> Acesso à área de membros com download liberado</li>
+    <li><i class="fa-solid fa-check"></i> Código fonte completo, White Label, sem marca de terceiros</li>
+    <li><i class="fa-solid fa-check"></i> Vídeo aulas de instalação e configuração, passo a passo</li>
+    <li><i class="fa-solid fa-check"></i> Versão Saas Multi Empresas, pronta para revenda</li>
+    <li><i class="fa-solid fa-check"></i> Kanban CRM e Dark Mode já integrados</li>
+    <li><i class="fa-solid fa-check"></i> Integrações com Typebot, N8N, OpenAI, DialogFlow e Webhooks</li>
+    <li><i class="fa-solid fa-diagram-project"></i> Bônus: Flow Builder para automação de fluxos</li>
+    <li><i class="fa-solid fa-gift"></i> Bônus: Wasender Revenda (disparador em massa)</li>
+    <li><i class="fa-solid fa-gift"></i> Bônus: Site de vendas editável, pronto para divulgação</li>
+    <li><i class="fa-solid fa-check"></i> Link do GitHub com o código de instalação</li>
+  </ul>
+
+  <div class="box">
+    <strong>Dica:</strong> guarde o link da sua área de membros e o e-mail de cadastro em um lugar seguro. É por ali que você acessa downloads, vídeo aulas e atualizações.
+  </div>
+
+  <h3>Sobre a garantia</h3>
+  <p>Você tem 7 dias de garantia a partir da data da compra. Se nesse período sentir que o produto não é para você, é só chamar nosso suporte pelo WhatsApp.</p>
+</section>
+
+<!-- 2. REQUISITOS -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">2</span> Requisitos para instalar</h2>
+  <p class="section-sub">O que você precisa ter em mãos antes de começar a instalação.</p>
+
+  <p>O WhaTicket roda em um servidor próprio (VPS). Ele não funciona em hospedagem compartilhada nem em painéis como cPanel. Veja a configuração mínima recomendada:</p>
+
+  <table>
+    <tr><th>Item</th><th>Recomendado</th></tr>
+    <tr><td>Sistema operacional</td><td>Ubuntu 20.04 ou 22.04 LTS</td></tr>
+    <tr><td>Processador</td><td>4 vCores</td></tr>
+    <tr><td>Memória RAM</td><td>4 GB ou mais</td></tr>
+    <tr><td>Acesso</td><td>Usuário root via SSH</td></tr>
+    <tr><td>Domínio</td><td>Um domínio ou subdomínio apontado para o IP do VPS</td></tr>
+  </table>
+
+  <div class="box warning">
+    <strong>Importante:</strong> se você nunca configurou um VPS, não se preocupe. Na sua área de membros tem o vídeo aula completo, do zero até o sistema rodando, e nosso suporte te acompanha nesse processo.
+  </div>
+
+  <h3>Onde contratar o VPS</h3>
+  <p>Qualquer provedor que ofereça VPS com Ubuntu funciona (Hostinger, Contabo, DigitalOcean, entre outros). Escolha um plano que atenda aos requisitos da tabela acima e anote o IP, usuário e senha de acesso fornecidos pelo provedor.</p>
+</section>
+
+<!-- 3. INSTALAÇÃO -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">3</span> Instalação do sistema</h2>
+  <p class="section-sub">Passo a passo resumido. O detalhamento completo está em vídeo na área de membros.</p>
+
+  <ol>
+    <li><strong>Acesse o VPS via SSH</strong>, usando o IP e a senha enviados pelo provedor.</li>
+    <li><strong>Baixe o instalador</strong> a partir do link do GitHub disponível na sua área de membros.</li>
+    <li><strong>Execute o script de instalação</strong> e informe o domínio que você vai usar para acessar o painel.</li>
+    <li><strong>Aguarde a configuração automática</strong> do banco de dados, backend e frontend. Esse processo leva alguns minutos.</li>
+    <li><strong>Acesse o painel pelo domínio configurado</strong> e faça login com o usuário administrador criado durante a instalação.</li>
+  </ol>
+
+  <div class="box">
+    <strong>Travou em algum passo?</strong> Envie uma mensagem para o nosso suporte com o print da tela e a etapa em que você está. Nossa equipe te ajuda a destravar.
+  </div>
+</section>
+
+<!-- 4. CONFIGURAÇÃO INICIAL -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">4</span> Configuração inicial do painel</h2>
+  <p class="section-sub">Os primeiros ajustes para deixar o sistema pronto para o atendimento.</p>
+
+  <h3>4.1 · Empresa</h3>
+  <p>Cadastre os dados da sua empresa (ou das empresas dos seus clientes, se for revender o sistema). É possível ter várias empresas dentro da mesma instalação, cada uma com seu próprio acesso.</p>
+
+  <h3>4.2 · Conexões</h3>
+  <p>Vá até o menu "Conexões" e adicione um novo WhatsApp. Vai aparecer um QR Code: abra o WhatsApp do número que vai atender, entre em Dispositivos Conectados e escaneie o código. Em poucos segundos a conexão fica ativa.</p>
+
+  <h3>4.3 · Filas e usuários</h3>
+  <p>Crie as filas de atendimento (ex: Vendas, Suporte, Financeiro) e cadastre os usuários que vão atender em cada uma. Assim cada atendente vê só o que é dele, sem misturar conversas.</p>
+
+  <h3>4.4 · Mensagens rápidas e tags</h3>
+  <p>Cadastre respostas prontas para perguntas frequentes e crie tags para organizar os atendimentos por status (ex: novo lead, em negociação, fechado).</p>
+</section>
+
+<!-- 5. FLOW BUILDER -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">5</span> Automatizando com o Flow Builder</h2>
+  <p class="section-sub">Como montar seu primeiro fluxo de atendimento automático.</p>
+
+  <p>O Flow Builder é o editor visual de automações do WhaTicket. Com ele você monta uma árvore de conversa sem escrever código: o cliente manda mensagem, o fluxo responde, faz perguntas, direciona para o setor certo ou já entrega a informação que ele precisa.</p>
+
+  <ol>
+    <li>Acesse o menu "Flow Builder" e clique em "Novo Fluxo".</li>
+    <li>Arraste os blocos de mensagem, pergunta, condição e encaminhamento para montar a conversa.</li>
+    <li>Conecte os blocos na ordem que faz sentido para o seu negócio.</li>
+    <li>Defina qual conexão de WhatsApp vai usar esse fluxo.</li>
+    <li>Ative o fluxo e teste enviando uma mensagem para o número conectado.</li>
+  </ol>
+
+  <div class="box">
+    <strong>Use para:</strong> qualificar leads antes de passar para um humano, responder dúvidas frequentes, confirmar agendamentos e até fazer o primeiro contato de uma campanha.
+  </div>
+
+  <h3>Campanhas em massa</h3>
+  <p>No menu "Campanhas" você agenda envios para uma lista de contatos, usando variáveis como <code>{nome}</code>, <code>{numero}</code> e <code>{email}</code> para personalizar cada mensagem automaticamente.</p>
+</section>
+
+<!-- 6. FINANCEIRO E REVENDA -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">6</span> Financeiro e revenda</h2>
+  <p class="section-sub">Como cobrar seus clientes e vender o WhaTicket no seu nome.</p>
+
+  <h3>6.1 · Cobranças automáticas</h3>
+  <p>O sistema já vem com integração para Asaas e GerenciaNet. Cadastre suas credenciais no menu "Financeiro" para gerar cobranças, boletos e Pix automaticamente para os clientes da sua instalação Saas.</p>
+
+  <h3>6.2 · Direito de revenda</h3>
+  <p>Sua licença inclui direito de revenda. Isso significa que você pode instalar o sistema para outras empresas, cobrar uma mensalidade por isso e usar a sua própria marca, sem qualquer referência ao WhaTicket original.</p>
+
+  <h3>6.3 · Bônus para revenda</h3>
+  <ul class="checklist">
+    <li><i class="fa-solid fa-gift"></i> <strong>Wasender Revenda:</strong> ferramenta de disparo em massa que você também pode revender separadamente.</li>
+    <li><i class="fa-solid fa-gift"></i> <strong>Site editável:</strong> uma página de vendas pronta, no mesmo estilo desta, para você editar com a sua marca e divulgar o seu serviço.</li>
+  </ul>
+</section>
+
+<!-- 7. SUPORTE -->
+<section class="page page-break">
+  <h2 class="section-num"><span class="num">7</span> Suporte e atualizações</h2>
+  <p class="section-sub">Canais de ajuda e como manter seu sistema sempre atualizado.</p>
+
+  <h3>Como falar com o suporte</h3>
+  <p>Tire dúvidas sobre instalação, configuração ou uso do sistema diretamente pelo WhatsApp da nossa equipe. Tenha em mãos o print da tela ou da mensagem de erro: isso agiliza muito o atendimento.</p>
+
+  <div class="cta-final">
+    <h2>Precisa de ajuda?</h2>
+    <p>Nossa equipe responde por aqui, de segunda a sábado.</p>
+    <a href="https://wa.me/5534991839854" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Falar com o suporte no WhatsApp
+    </a>
+  </div>
+
+  <h3>Atualizações</h3>
+  <p>Sempre que sair uma nova versão, o link de download na sua área de membros é atualizado. Antes de atualizar um sistema em produção, faça um backup do banco de dados.</p>
+
+  <div class="footer-note">
+    <span>WhaTicket &mdash; Manual de Uso</span>
+    <span>wa.me/5534991839854</span>
+  </div>
+</section>
+
+</body>
+</html>
