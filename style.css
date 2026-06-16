@@ -288,7 +288,7 @@ section { padding: 90px 0; }
 .plans-grid {
   margin-top: 48px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -371,6 +371,12 @@ section { padding: 90px 0; }
   font-size: 40px;
   font-weight: 800;
   color: var(--text);
+}
+
+.price-value small {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .price-note {
